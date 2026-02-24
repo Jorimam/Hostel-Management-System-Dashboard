@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HMS Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgDark: "#0f0f10",
+            cardDark: "#1b1c1e",
+            sidebarDark: "#18191b",
+            cyanAccent: "#18e0d4",
+            yellowAccent: "#ffe600",
+            pinkAccent: "#ff00c8",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-bgDark text-white font-sans">
+
+<!-- Top Navigation -->
+<nav class="bg-sidebarDark px-8 py-4">
+  <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <span class="w-3 h-3 bg-cyanAccent rounded-full"></span>
+      <span class="text-xl font-bold">HMS</span>
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="flex gap-8">
+      <a href="#" class="text-cyanAccent font-semibold flex items-center gap-2 ">
+        <img src="./images/material-symbols_dashboard-outline.png" alt="Dashboard" class="w-5 h-5">
+        Dashboard
+      </a>
+      <a href="./rooms.html" class="text-gray-400 hover:text-white flex items-center gap-2">
+        <img src="./images/fluent_device-meeting-room-20-regular.png" alt="Rooms" class="w-5 h-5">
+        Rooms
+      </a>
+      <a href="#" class="text-gray-400 hover:text-white flex items-center gap-2">
+        <img src="./images/material-symbols_co-present-outline-sharp.png" alt="Attendance" class="w-5 h-5">
+        Attendance
+      </a>
+      <a href="#" class="text-gray-400 hover:text-white flex items-center gap-2">
+        <img src="./images/material-symbols_account-balance-outline-rounded.png" alt="Accounts" class="w-5 h-5">
+        Accounts
+      </a>
+      <a href="#" class="text-gray-400 hover:text-white flex items-center gap-2">
+        <img src="./images/material-symbols_account-balance-outline-rounded (1).png"> Maintenance
+      </a>
+    </div>
+
+    <!-- Right Icons -->
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 bg-cardDark rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer"><img src="./images/calendar.png"> </div>
+      <div class="w-10 h-10 bg-cardDark rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer"><img src="./images/notification.png"></div>
+      <div class="w-10 h-10 bg-cardDark rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer"><img src="./images/profile.png"></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content Area -->
+<div class="flex min-h-screen">
+
+  <!-- Left Sidebar -->
+  <aside class="w-64 bg-sidebarDark p-6 ml-3 mb-8 rounded-xl mt-4 space-y-6">
+    <div class="">
+      <h2 class="text-lg font-semibold flex items-center gap-2 mb-4">
+        <img src="./images/uis_analytics.png" alt="Analytics" class="w-5 h-5"> Analytics
+      </h2>
+      <nav class="space-y-3">
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/ph_student.png" alt="Students" class="w-5 h-5"> Students
+        </a>
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/fe_angry.png" alt="Complaints" class="w-5 h-5"> Complaints
+        </a>
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/bi_boxes.png" alt="Stock" class="w-5 h-5"> Stock
+        </a>
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/mi_users.png" alt="Users" class="w-5 h-5"> Users
+        </a>
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/bx_dish.png" alt="Meals" class="w-5 h-5"> Meals
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Mid Section -->
+  <main class="flex-1 p-8 space-y-3">
+
+    <!-- Occupancy -->
+    <div class="bg-cardDark rounded-lg p-6">
+      <h2 class="text-lg font-semibold mb-6">Occupancy</h2>
+
+      <div class="grid grid-cols-3 gap-6">
+
+        <!-- Hostel 1 -->
+        <div class="bg-bgDark p-6 rounded-xl">
+          
+          <div class="flex items-center gap-2 mb-4">
+            <h3>Hostel 1</h3>
+            <img src="./images/Vector.png" alt="Arrow Up" class="w-3 h-3">
+          </div>
+          <div class="relative w-32 h-32 mx-auto">
+            <div class="absolute inset-0 rounded-full border-8 border-gray-800"></div>
+            <div class="absolute inset-0 rounded-full border-8 border-cyanAccent border-t-transparent border-l-transparent rotate-[45deg]"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">50%</div>
+          </div>
+        </div>
+
+        <!-- Hostel 2 -->
+        <div class="bg-bgDark p-6 rounded-xl">
+          <div class="flex items-center gap-2 mb-4">
+            <h3>Hostel 2</h3>
+            <img src="./images/Vector.png" alt="Arrow Up" class="w-3 h-3">
+          </div>
+          <div class="relative w-32 h-32 mx-auto">
+            <div class="absolute inset-0 rounded-full border-8 border-gray-800"></div>
+            <div class="absolute inset-0 rounded-full border-8 border-yellowAccent border-t-transparent rotate-[90deg]"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">75%</div>
+          </div>
+        </div>
+
+        <!-- Hostel 3 -->
+        <div class="bg-bgDark p-6 rounded-xl">
+          <div class="flex items-center gap-2 mb-4">
+            <h3>Hostel 3</h3>
+            <img src="./images/Vector.png" alt="Arrow Up" class="w-3 h-3">
+          </div>
+          <div class="relative w-32 h-32 mx-auto">
+            <div class="absolute inset-0 rounded-full border-8 border-gray-800"></div>
+            <div class="absolute inset-0 rounded-full border-8 border-pinkAccent border-t-transparent rotate-[90deg]"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">95%</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Fees Collection -->
+    <div class="bg-cardDark rounded-lg p-6">
+        <div class="flex items-center gap-2 mb-6">
+            <h2 class="text-lg font-semibold">Fees Collection</h2>
+            <img src="./images/Vector.png" alt="Arrow Up" class="w-3 h-3">
+        </div>
+
+      <div class="flex gap-8 items-center">
+
+        <!-- Donut -->
+        <!-- <div class="relative w-40 h-40">
+          <div class="absolute inset-0 rounded-full border-8 border-yellowAccent"></div>
+          <div class="absolute inset-0 rounded-full border-8 border-pinkAccent"></div>
+          <div class="absolute inset-0 rounded-full border-8 border-cyanAccent border-t-transparent rotate-[180deg]"></div>
+          <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">50%</div>
+        </div> -->
+        <!-- 3 Color Donut -->
+        <div class="relative w-40 h-40">
+        
+            <!-- Donut Ring -->
+            <div class="w-full h-full rounded-full 
+                        bg-[conic-gradient(#18e0d4_0deg_180deg,#ffe600_180deg_270deg,#ff00c8_270deg_360deg)]">
+            </div>
+
+            <!-- Inner Hole -->
+            <div class="absolute inset-2 bg-bgDark rounded-full"></div>
+
+            <!-- Center Text -->
+            <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">
+                50%
+            </div>
+
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 gap-4 flex-1">
+          <div class="bg-bgDark p-4 rounded-xl flex justify-between items-center ">
+            <div>
+                <span class="text-gray-400"></span>
+                <div>
+                <p class="text-gray-400 text-sm">Expected</p>
+                <p class="text-lg font-bold">₹ 52,00,000</p>
+                </div>
+            </div>
+            <div>
+               <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  class="text-white"
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="m12.71 12.71 5.5-5.5L21 10V3h-7l2.79 2.79-5.5 5.5z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path>
+                </svg>
+            </div>
+                
+          </div>
+          <div class="bg-bgDark p-4 rounded-xl flex items-center gap-3 justify-between">
+            <div>
+                <span class="text-yellowAccent"></span>
+                <div>
+                <p class="text-gray-400 text-sm">Remaining</p>
+                <p class="text-yellowAccent text-lg font-bold">₹ 15,60,000</p>
+                </div>
+            </div>
+            <div>
+                <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  class="text-yellowAccent"
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="m12.71 12.71 5.5-5.5L21 10V3h-7l2.79 2.79-5.5 5.5z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path>
+                </svg>
+            </div>
+          </div>
+          <div class="bg-bgDark p-4 rounded-xl flex items-center gap-3 justify-between">
+            <div>
+                <span class="text-cyanAccent"></span>
+                <div>
+                <p class="text-gray-400 text-sm">Collected</p>
+                <p class="text-cyanAccent text-lg font-bold">₹ 26,00,000</p>
+                </div>
+            </div>
+            <div>
+               <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  class="text-cyanAccent"
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="m12.71 12.71 5.5-5.5L21 10V3h-7l2.79 2.79-5.5 5.5z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path>
+                </svg>
+            </div>
+          </div>
+          <div class="bg-bgDark p-4 rounded-xl flex items-center gap-3 justify-between">
+            <div>    
+                <span class="text-pinkAccent"></span>
+                <div>
+                <p class="text-gray-400 text-sm">Overdue</p>
+                <p class="text-pinkAccent text-lg font-bold">₹ 10,40,000</p>
+                </div>
+            </div>
+            <div>
+               <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  class="text-pinkAccent"
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="m12.71 12.71 5.5-5.5L21 10V3h-7l2.79 2.79-5.5 5.5z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path>
+                </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Complaints -->
+    <div class="bg-cardDark rounded-2xl p-6">
+      <div class="flex items-center gap-2 mb-6">
+        <h2 class="text-lg font-semibold">Complaints</h2>
+        <img src="./images/Vector.png" alt="Arrow Up" class="w-3 h-3">
+      </div>
+
+      <div class="flex gap-8 items-center">
+        <!-- Bar Chart -->
+        <div class="flex gap-0 items-end">
+          <div class="w-24 h-20 bg-cyanAccent rounded-l" ></div>
+          <div class="w-10 h-20 bg-yellowAccent rounded-r"></div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 flex-1">
+          <div class="bg-bgDark p-3 rounded-xl">
+            <div class="flex items-center gap-2">
+                <p class="text-gray-400 text-xs mb-1">Total Complaints</p>
+                <img src="./images/Vector.png" alt="Arrow Up" class="w-3 h-3">
+            </div>
+            <p class="text-2xl font-bold">158</p>
+          </div>
+          <div class="bg-bgDark p-3 rounded-xl">
+            <div class="flex items-center  gap-2">
+                <p class="text-gray-400 text-sm mb-1">Resolved</p>
+                <img src="./images/Vector.png" alt="Arrow Up" class="w-3 h-3">
+            </div>
+            <p class="text-cyanAccent text-2xl font-bold">96</p>
+          </div>
+          <div class="bg-bgDark p-3 rounded-xl">
+            <div class="flex items-center gap-2">
+                <p class="text-gray-400 text-xs mb-1">Open</p>
+                <img src="./images/Vector.png" alt="Arrow Up" class="w-3 h-3">
+            </div>
+            <p class="text-yellowAccent text-2xl font-bold">62</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Right Side -->
+  <aside class="w-80 bg-bgDark p-6 space-y-3">
+
+    <!-- Student Update -->
+    <div class="bg-cardDark rounded-lg p-5">
+      <h2 class="text-lg font-semibold mb-3">Student Update</h2>
+
+      <div class="space-y-2">
+        <div class="flex items-center justify-between bg-bgDark p-3 rounded-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-xs">
+                <img src="./images/Ellipse 10.png" alt="Profile" class="w-10 h-10">
+            </div>
+            <div class="flex flex-col">
+              <p class="text-sm font-semibold">Ramakant Sharma</p>
+              <div class="flex items-center gap-1">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12"  class="text-cyanAccent"
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="m16 12-6-5v4H3v2h7v4z"></path><path d="M19 3h-7v2h7v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2"></path>
+                </svg>
+                <p class="text-xs text-gray-400">12:30</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between bg-bgDark p-3 rounded-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-xs">
+                <img src="./images/Ellipse 10.png" alt="Profile" class="w-10 h-10">
+            </div>
+            <div class="flex flex-col">
+              <p class="text-sm font-semibold">Ramakant Sharma</p>
+              <div class="flex items-center gap-1">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="text-yellowAccent" 
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="M5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h7v-2H5z"></path><path d="m14 7-6 5 6 5v-4h7v-2h-7z"></path>
+                </svg>
+                <p class="text-xs text-gray-400">12:30</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between bg-bgDark p-3 rounded-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-xs">
+                <img src="./images/Ellipse 10.png" alt="Profile" class="w-10 h-10">
+            </div>
+            <div class="flex flex-col">
+              <p class="text-sm font-semibold">Ramakant Sharma</p>
+              <div class="flex items-center gap-1">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12"  class="text-cyanAccent"
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="m16 12-6-5v4H3v2h7v4z"></path><path d="M19 3h-7v2h7v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2"></path>
+                </svg>
+                <p class="text-xs text-gray-400">12:30</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between bg-bgDark p-3 rounded-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-xs">
+                <img src="./images/Ellipse 10.png" alt="Profile" class="w-10 h-10">
+            </div>
+            <div class="flex flex-col">
+              <p class="text-sm font-semibold">Ramakant Sharma</p>
+              <div class="flex items-center gap-1">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="text-yellowAccent" 
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="M5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h7v-2H5z"></path><path d="m14 7-6 5 6 5v-4h7v-2h-7z"></path>
+                </svg>
+                <p class="text-xs text-gray-400">12:30</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between bg-bgDark p-3 rounded-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-xs">
+                <img src="./images/Ellipse 10.png" alt="Profile" class="w-10 h-10">
+            </div>
+            <div class="flex flex-col">
+              <p class="text-sm font-semibold">Ramakant Sharma</p>
+              <div class="flex items-center gap-1">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12"  class="text-cyanAccent"
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="m16 12-6-5v4H3v2h7v4z"></path><path d="M19 3h-7v2h7v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2"></path>
+                </svg>
+                <p class="text-xs text-gray-400">12:30</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between bg-bgDark p-3 rounded-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-xs">
+                <img src="./images/Ellipse 10.png" alt="Profile" class="w-10 h-10">
+            </div>
+            <div class="flex flex-col">
+              <p class="text-sm font-semibold">Ramakant Sharma</p>
+              <div class="flex items-center gap-1">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="text-yellowAccent" 
+                fill="currentColor" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="M5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h7v-2H5z"></path><path d="m14 7-6 5 6 5v-4h7v-2h-7z"></path>
+                </svg>
+                <p class="text-xs text-gray-400">12:30</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+
+    <!-- Emergency -->
+    <div class="bg-cardDark rounded-lg p-5 text-center">
+      <div class="w-32 h-32 mx-auto bg-red-900 rounded-full flex items-center justify-center mb-4 cursor-pointer hover:bg-red-800 transition-colors">
+        <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-2xl">
+            <img src="./images/material-symbols_crisis-alert-rounded.png">
+        </div>
+      </div>
+      <p class="text-gray-400 mb-4">Press only in Case of Emergency</p>
+      <button class="w-full bg-red-600 hover:bg-red-700 py-2 rounded-lg font-bold transition-colors">
+        EMERGENCY
+      </button>
+    </div>
+
+  </aside>
+
+</div>
+
+</body>
+</html>
