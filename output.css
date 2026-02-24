@@ -704,11 +704,17 @@
   .bg-\[\#1b1c1e\] {
     background-color: #1b1c1e;
   }
+  .bg-\[\#00868D\] {
+    background-color: #00868D;
+  }
   .bg-\[\#18191b\] {
     background-color: #18191b;
   }
   .bg-\[\#141414\] {
     background-color: #141414;
+  }
+  .bg-\[\#\] {
+    background-color: #;
   }
   .bg-black {
     background-color: var(--color-black);
