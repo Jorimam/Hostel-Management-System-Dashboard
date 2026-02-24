@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgDark: "#0f0f10",
+            cardDark: "#1b1c1e",
+            sidebarDark: "#18191b",
+            cyanAccent: "#18e0d4",
+            yellowAccent: "#ffe600",
+            pinkAccent: "#ff00c8",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-bgDark text-white font-sans">
+
+<!-- Top Navigation -->
+<nav class="bg-sidebarDark px-8 py-4">
+  <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <span class="w-3 h-3 bg-cyanAccent rounded-full"></span>
+      <span class="text-xl font-bold">HMS</span>
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="flex gap-8">
+      <a href="#" class="text-cyanAccent font-semibold flex items-center gap-2 ">
+        <img src="./images/material-symbols_dashboard-outline.png" alt="Dashboard" class="w-5 h-5">
+        Dashboard
+      </a>
+      <a href="./rooms.html" class="text-gray-400 hover:text-white flex items-center gap-2">
+        <img src="./images/fluent_device-meeting-room-20-regular.png" alt="Rooms" class="w-5 h-5">
+        Rooms
+      </a>
+      <a href="#" class="text-gray-400 hover:text-white flex items-center gap-2">
+        <img src="./images/material-symbols_co-present-outline-sharp.png" alt="Attendance" class="w-5 h-5">
+        Attendance
+      </a>
+      <a href="#" class="text-gray-400 hover:text-white flex items-center gap-2">
+        <img src="./images/material-symbols_account-balance-outline-rounded.png" alt="Accounts" class="w-5 h-5">
+        Accounts
+      </a>
+      <a href="#" class="text-gray-400 hover:text-white flex items-center gap-2">
+        <img src="./images/material-symbols_account-balance-outline-rounded (1).png"> Maintenance
+      </a>
+    </div>
+
+    <!-- Right Icons -->
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 bg-cardDark rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer"><img src="./images/calendar.png"> </div>
+      <div class="w-10 h-10 bg-cardDark rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer"><img src="./images/notification.png"></div>
+      <div class="w-10 h-10 bg-cardDark rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer"><img src="./images/profile.png"></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content Area -->
+<div class="flex min-h-screen">
+
+  <!-- Left Sidebar -->
+  <aside class="w-64 bg-sidebarDark p-6 ml-3 mb-8 rounded-xl mt-4 space-y-6">
+    <div class="">
+     
+      <nav class="space-y-3">
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/anlyze.png" alt="Analytics" class="w-5 h-5"> 
+        <h2>Analytics</h2>
+        </a>
+        <a href="./students.html" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/student.png" alt="Students" class="w-5 h-5"> 
+        <h2 class="text-lg font-semibold">Students</h2>
+        </a>
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/fe_angry.png" alt="Complaints" class="w-5 h-5"> 
+        <h2>Complaints</h2>
+        </a>
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/bi_boxes.png" alt="Stock" class="w-5 h-5"> Stock
+        </a>
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/mi_users.png" alt="Users" class="w-5 h-5"> Users
+        </a>
+        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800">
+        <img src="./images/bx_dish.png" alt="Meals" class="w-5 h-5"> Meals
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Mid Section -->
+  <main class="flex-1 p-8 space-y-3">
+
+    <!-- MAIN WRAPPER -->
+  <div class="p-6">
+
+    <!-- ================= TOP SECTION ================= -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl flex gap-5 mb-6">
+        <div class="flex-1 gap-5">
+            <div class="flex gap-5">
+                <!-- Stat Card -->
+                <div class="bg-black p-2 rounded-xl min-w-[120px]">
+                <div class="flex gap-1">
+                    <p class="text-gray-400 text-xs">Total Students</p>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                    <path d="m12.71 12.71 5.5-5.5L21 10V3h-7l2.79 2.79-5.5 5.5z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path>
+                    </svg>
+                </div>
+                    
+                <h2 class="text-lg mt-2">3569</h2>
+                </div>
+
+                <div class="bg-black p-2 rounded-xl min-w-[120px]">
+                <div class="flex gap-1">
+                    <p class="text-gray-400 text-xs">In Hostel</p>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                    <path d="m12.71 12.71 5.5-5.5L21 10V3h-7l2.79 2.79-5.5 5.5z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-lg text-cyan-400 mt-2">1569</h2>
+                </div>
+
+                <div class="bg-black p-2 rounded-xl min-w-[120px]">
+                <div class="flex gap-1">
+                    <p class="text-gray-400 text-xs">Outside Hostel</p>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                    <path d="m12.71 12.71 5.5-5.5L21 10V3h-7l2.79 2.79-5.5 5.5z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-lg mt-2">2500</h2>
+                </div>
+            </div>
+            <div class="flex gap-5 mt-4">
+                <div class="bg-black p-2 rounded-xl min-w-[120px]">
+                   <div class="flex gap-1">
+                    <p class="text-gray-400 text-xs">Students Assigned</p>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                    <path d="m12.71 12.71 5.5-5.5L21 10V3h-7l2.79 2.79-5.5 5.5z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path>
+                    </svg>
+                </div>
+                    <h2 class="text-lg text-pink-500 mt-2">2569</h2>
+                </div>
+                <div class="bg-black p-2 rounded-xl min-w-[120px]">
+                   <div class="flex gap-1">
+                    <p class="text-gray-400 text-xs">Students Removed</p>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12"  
+                    fill="currentColor" viewBox="0 0 24 24" >
+                    <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                    <path d="m12.71 12.71 5.5-5.5L21 10V3h-7l2.79 2.79-5.5 5.5z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path>
+                    </svg>
+                </div>
+                    <h2 class="text-lg text-red-600 mt-2">1000</h2>
+                </div>
+            </div>
+        </div>
+        
+    
+      
+      <div class="">
+        <!-- Fees Defaulters Card -->
+        <div class="bg-black p-5 py-6 rounded-xl flex flex-col justify-between">
+          <div>
+            <p class="text-gray-400 text-xs">Fees Defaulters</p>
+            <h2 class="text-lg text-yellow-400 mt-2">150</h2>
+          </div>
+          <button class="mt-4 bg-[#1a1a1a]  py-2 px-4 rounded-lg hover:bg-gray-600">
+            View List
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CONTENT GRID ================= -->
+    <div class="grid grid-cols-12 gap-6">
+
+      <!-- ================= STUDENTS SECTION ================= -->
+      <div class="col-span-5 bg-[#1a1a1a] p-5 rounded-2xl">
+
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-lg">Students</h3>
+        </div>
+
+        <div class="flex gap-3 mb-4">
+          <input type="text" placeholder="Search ..."
+            class="flex-1 bg-black p-2 rounded-lg outline-none border border-gray-700">
+          <button class="bg-gray-700 px-4 rounded-lg hover:bg-gray-600">
+            Filter
+          </button>
+        </div>
+
+        <!-- Student List -->
+        <div class="space-y-3 h-[420px] overflow-y-auto pr-2">
+          <!-- Student Item -->
+          <div class="bg-black p-3 rounded-lg flex justify-between items-center">
+            <div class="flex items-center gap-3">
+              <img src="https://i.pravatar.cc/40" class="w-8 h-8 rounded-full">
+              <p>Abhinav Srivastva</p>
+            </div>
+            <button class="text-gray-400 hover:text-white">👁</button>
+          </div>
+
+          <!-- Duplicate Items -->
+          <div class="bg-black p-3 rounded-lg flex justify-between items-center">
+            <div class="flex items-center gap-3">
+              <img src="https://i.pravatar.cc/41" class="w-8 h-8 rounded-full">
+              <p>Abhinav Srivastva</p>
+            </div>
+            <button class="text-gray-400 hover:text-white">👁</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ================= DEFAULTERS SECTION ================= -->
+      <div class="col-span-4 bg-[#1a1a1a] p-5 rounded-2xl">
+
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-lg">Defaulters Students</h3>
+        </div>
+
+        <div class="flex gap-3 mb-4">
+          <input type="text" placeholder="Search ..."
+            class="flex-1 bg-black p-2 rounded-lg outline-none border border-gray-700">
+          <button class="bg-cyan-500 text-black px-4 rounded-lg hover:bg-cyan-400">
+            +Add
+          </button>
+        </div>
+
+        <!-- Defaulter Card -->
+        <div class="bg-black p-4 rounded-xl mb-4">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="https://i.pravatar.cc/42" class="w-8 h-8 rounded-full">
+            <p>Abhinav Srivastva</p>
+          </div>
+
+          <p class="text-gray-400 text-sm mb-2">
+            Broke 4 Test Tubes in Hostel Mess
+          </p>
+
+          <div class="flex justify-between text-sm text-gray-400 mb-3">
+            <span>Fine: ₹1,500</span>
+            <span>12 Nov 2022</span>
+          </div>
+
+          <div class="flex gap-3">
+            <button class="flex-1 border border-red-500 text-red-500 py-2 rounded-lg hover:bg-red-500 hover:text-white">
+              Remove Defaulter
+            </button>
+            <button class="flex-1 border border-cyan-400 text-cyan-400 py-2 rounded-lg hover:bg-cyan-400 hover:text-black">
+              Send Payment Link
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+
+      
+
+    </div>
+
+  </div>
+   
+         
+      
+
+  </main>
+
+  <!-- Right Side -->
+  <aside class="w-80 bg-bgDark p-6 space-y-3">
+
+   <!-- ================= RIGHT ASIDE ================= -->
+      <div class="col-span-3 space-y-6">
+
+        <!-- Add / Remove Buttons -->
+        <div class="bg-[#1a1a1a] p-5 rounded-2xl space-y-4">
+          <button class="w-full border border-cyan-400 text-cyan-400 py-3 rounded-xl hover:bg-cyan-400 hover:text-black">
+            +Add Student
+          </button>
+
+          <button class="w-full border border-red-500 text-red-500 py-3 rounded-xl hover:bg-red-500 hover:text-white">
+            Remove Student
+          </button>
+        </div>
+
+        <!-- Student Update -->
+        <div class="bg-[#1a1a1a] p-5 rounded-2xl">
+          <h3 class="mb-4 text-lg">Student Update</h3>
+
+          <div class="space-y-3 h-[420px] overflow-y-auto pr-2">
+
+            <div class="bg-black p-3 rounded-lg flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <img src="https://i.pravatar.cc/45" class="w-8 h-8 rounded-full">
+                <div>
+                  <p class="text-sm">Ramakant Sharma</p>
+                  <span class="text-xs text-gray-400">12:30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-black p-3 rounded-lg flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <img src="https://i.pravatar.cc/46" class="w-8 h-8 rounded-full">
+                <div>
+                  <p class="text-sm">Ramakant Sharma</p>
+                  <span class="text-xs text-gray-400">12:30</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+  </aside>
+
+</div>
+
+</body>
+</html>
